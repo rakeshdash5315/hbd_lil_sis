@@ -465,6 +465,7 @@ h1, h2, h3 {
     border-left: 150px solid #f39c12;
     border-right: 150px solid #f39c12;
     border-bottom: 100px solid #e67e22;
+    border-top: 100px solid transparent;
     z-index: 2;
 }
 
@@ -473,10 +474,10 @@ h1, h2, h3 {
     bottom: 0;
     left: 10px;
     width: 280px;
-    height: 400px;
+    height: 180px;
     background: #fdf5e6;
     z-index: 1;
-    transition: transform 1s ease;
+    transition: transform 1s ease, height 1s ease;
     padding: 20px;
     box-sizing: border-box;
     color: #333;
@@ -493,6 +494,7 @@ h1, h2, h3 {
 
 .envelope.open .letter-paper {
     transform: translateY(-150px);
+    height: 400px;
     z-index: 4;
 }
 
