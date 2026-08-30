@@ -802,3 +802,26 @@ h1, h2, h3 {
     .lightbox-content p { font-size: 1.2rem; }
     .lightbox-close { top: 10px; right: 15px; font-size: 30px; }
 }
+
+/* Watermark */
+.watermark {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    z-index: 1000;
+    pointer-events: none;
+    font-family: var(--font-script);
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+    .watermark {
+        font-size: 0.75rem;
+        bottom: 5px;
+    }
+}

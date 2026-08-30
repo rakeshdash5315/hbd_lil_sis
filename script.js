@@ -5,7 +5,7 @@ const CONFIG = {
     sisterName: "Papali",
     nickname: "Em",
     age: "18",
-    brotherName: "David",
+    SisterName: "Mamali",
     birthdayMessage: "Happy Birthday to my amazing little sister ❤️",
     wishes: [
         { title: "Your Happiness", text: "I hope your life is always filled with reasons to smile." },
@@ -45,7 +45,7 @@ You will always be my little sister ❤️
 Happy Birthday 🎂✨
 
 With lots of love,
-Your Brother ❤️`
+Your Sister ❤️`
 };
 
 const imageFiles = [
@@ -106,7 +106,7 @@ function populateText() {
     document.querySelectorAll('.sys-sister-name').forEach(el => el.textContent = CONFIG.sisterName);
     document.querySelectorAll('.sys-sister-name-caps').forEach(el => el.textContent = CONFIG.sisterName.toUpperCase());
     document.querySelectorAll('.sys-age').forEach(el => el.textContent = CONFIG.age);
-    document.querySelectorAll('.sys-brother-name').forEach(el => el.textContent = CONFIG.brotherName);
+    document.querySelectorAll('.sys-Sister-name').forEach(el => el.textContent = CONFIG.SisterName);
 }
 
 function distributePhotos() {
