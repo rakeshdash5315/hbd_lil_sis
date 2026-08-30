@@ -26,12 +26,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 body {
     font-family: var(--font-main);
     background-color: var(--clr-dark-blue);
     background: radial-gradient(circle at center, var(--clr-deep-purple) 0%, var(--clr-dark-blue) 100%);
     color: var(--clr-white);
-    overflow-x: hidden;
     line-height: 1.6;
 }
 
@@ -40,8 +45,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     pointer-events: none;
 }
@@ -631,7 +636,7 @@ h1, h2, h3 {
 }
 #heart-collage-container {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
