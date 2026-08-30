@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Journey Through Your Beautiful Memories ❤️</title>
+    <meta name="description" content="A magical birthday journey for my little sister.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Global Controls -->
+    <div id="music-controls" class="glass-panel" aria-label="Music Controls" role="button" tabindex="0">
+        <span class="icon">🔇</span>
+        <span class="text">Play Music</span>
+        <audio id="bg-music" loop>
+            <source src="assets/audio/birthday-music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Loading Screen (Optional smooth entry) -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="heart-loader">❤️</div>
+            <p>Loading Magic...</p>
+        </div>
+    </div>
+
+    <!-- Section 1: Cinematic Opening -->
+    <section id="cinematic-opening" class="fullscreen-section">
+        <div class="content">
+            <p class="reveal-text text-1">Hey <span class="sys-sister-name"></span>... 👀</p>
+            <p class="reveal-text text-2">Today isn't just another day...</p>
+            <p class="reveal-text text-3">Because today...</p>
+            <p class="reveal-text text-4">The world became a little more beautiful ❤️</p>
+            <h1 class="reveal-text main-title">HAPPY BIRTHDAY <span class="sys-sister-name-caps"></span> 🎂✨</h1>
+            <button id="start-journey-btn" class="glowing-btn hidden">Start Your Surprise 🎁</button>
+        </div>
+    </section>
+
+    <!-- Section 2: Birthday Hero -->
+    <section id="birthday-hero" class="fullscreen-section hidden">
+        <div class="hero-content">
+            <h1 class="hero-title">Happy Birthday, <span class="sys-sister-name"></span> ❤️</h1>
+            <p class="hero-subtitle">Today is all about celebrating the amazing person you are ✨</p>
+            <div class="age-badge">Level <span class="sys-age"></span> Unlocked 🎮✨</div>
+            <div class="hero-decorations">
+                <!-- JavaScript will populate floating balloons and cake here -->
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <p>Scroll down to explore</p>
+            <div class="arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- Section 3: Floating Memories -->
+    <section id="floating-memories" class="content-section">
+        <h2 class="section-title">Some memories are too beautiful to forget ❤️</h2>
+        <div class="floating-container" id="floating-photos-container">
+            <!-- JS will populate floating polaroids here -->
+        </div>
+    </section>
+
+    <!-- Section 4: The Story of You -->
+    <section id="story-of-you" class="content-section narrative-section">
+        <div class="story-container">
+            <p class="story-text">You may be my little sister...</p>
+            <p class="story-text">But you are also my friend ❤️</p>
+            <p class="story-text">My partner in crime 😂</p>
+            <p class="story-text">My little troublemaker 😆</p>
+            <p class="story-text">The person who can annoy me the most 😭😂</p>
+            <p class="story-text">But also...</p>
+            <p class="story-text highlight-text">One of the most important people in my life ❤️</p>
+        </div>
+    </section>
+
+    <!-- Section 5: Why You Are Special -->
+    <section id="why-special" class="content-section">
+        <h2 class="section-title">Why You Are So Special ✨</h2>
+        <div class="cards-grid" id="special-cards-container">
+            <!-- JS will populate interactive cards -->
+        </div>
+    </section>
+
+    <!-- Section 6: Polaroid Memory Wall -->
+    <section id="memory-wall" class="content-section">
+        <h2 class="section-title">Our Scrapbook 📸</h2>
+        <div class="wall-container" id="memory-wall-container">
+            <!-- JS will populate scattered polaroids -->
+        </div>
+    </section>
+
+    <!-- Section 7: Memory Timeline -->
+    <section id="timeline" class="content-section">
+        <h2 class="section-title">Little Moments → Beautiful Memories → Amazing Future</h2>
+        <div class="timeline-container" id="timeline-container">
+            <!-- JS will populate timeline events -->
+        </div>
+    </section>
+
+    <!-- Section 8: Magic Photo Constellation -->
+    <section id="constellation" class="fullscreen-section constellation-section">
+        <h2 class="constellation-title">Every Memory With You Is A Star In My Life ⭐❤️</h2>
+        <div id="constellation-container">
+            <!-- JS will map photos as stars -->
+        </div>
+    </section>
+
+    <!-- Section 9: Secret Letter -->
+    <section id="secret-letter" class="content-section">
+        <div class="envelope-container">
+            <h2 class="envelope-title">💌 A Secret Letter For You</h2>
+            <div class="envelope" id="envelope-trigger">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <div class="letter-paper" id="letter-content">
+                        <!-- JS will inject the letter text with typing effect -->
+                    </div>
+                </div>
+            </div>
+            <p class="instruction-text">Tap the envelope to open</p>
+        </div>
+    </section>
+
+    <!-- Section 10: Choose Your Surprise -->
+    <section id="surprises" class="content-section">
+        <h2 class="section-title">Choose Your Birthday Surprise 🎁</h2>
+        <div class="gift-grid" id="gift-container">
+            <!-- JS will generate 6 mystery boxes -->
+        </div>
+    </section>
+
+    <!-- Section 11: Make a Wish -->
+    <section id="make-wish" class="fullscreen-section">
+        <div class="wish-container">
+            <div class="wish-steps">
+                <h2 class="wish-step step-1">Close your eyes...</h2>
+                <h2 class="wish-step step-2">Make a wish...</h2>
+                <h2 class="wish-step step-3">Blow the candles 🎂</h2>
+            </div>
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="tier top-tier"></div>
+                    <div class="tier bottom-tier"></div>
+                    <div class="candles" id="candles-container">
+                        <!-- JS injects candles based on age -->
+                    </div>
+                </div>
+            </div>
+            <button id="blow-candles-btn" class="glowing-btn wish-btn">Blow The Candles 💨</button>
+            <p class="wish-result hidden">May All Your Wishes Come True ✨❤️</p>
+        </div>
+    </section>
+
+    <!-- Section 12: Wishes for Your Future -->
+    <section id="future-wishes" class="content-section">
+        <h2 class="section-title">Wishes For Your Future 🌟</h2>
+        <div class="future-timeline" id="future-wishes-container">
+            <!-- JS injects future wishes -->
+        </div>
+    </section>
+
+    <!-- Section 13: The Ultimate Photo Finale -->
+    <section id="ultimate-finale" class="fullscreen-section">
+        <div class="finale-text-container">
+            <h2 class="finale-text ft-1">Every Picture Has A Memory...</h2>
+            <h2 class="finale-text ft-2">And Every Memory With You Is Special ❤️</h2>
+            <h1 class="finale-text ft-3 finale-title">HAPPY BIRTHDAY <span class="sys-sister-name-caps"></span> 🎂👑✨</h1>
+        </div>
+        <div id="heart-collage-container">
+            <!-- JS positions all photos into a heart shape -->
+        </div>
+    </section>
+
+    <!-- Section 14: Final Message -->
+    <section id="final-message" class="fullscreen-section ending-section">
+        <div class="ending-content">
+            <p class="end-text e-1">One Last Thing...</p>
+            <p class="end-text e-2">You are more loved than you know ❤️</p>
+            <p class="end-text e-3">Thank you for being you.</p>
+            <h1 class="end-title e-4">HAPPY BIRTHDAY <span class="sys-sister-name-caps"></span> ❤️🎂✨</h1>
+            <p class="end-signature e-5">Love You Always ❤️<br>— Your Brother, <span class="sys-brother-name"></span></p>
+            
+            <button id="replay-btn" class="glowing-btn e-6">Replay The Magic ✨</button>
+        </div>
+    </section>
+
+    <!-- Premium Photo Lightbox -->
+    <div id="photo-lightbox" class="lightbox hidden">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Memory">
+            <p id="lightbox-caption"></p>
+            <p id="lightbox-counter"></p>
+        </div>
+        <button class="lightbox-next">&#10095;</button>
+    </div>
+
+    <!-- External Libraries -->
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Confetti JS for particle explosions (Lightweight) -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Main Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
